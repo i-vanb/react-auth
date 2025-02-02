@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+# 🔐 React Authentication Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **modern authentication system** built with **React, TypeScript, Vite, React Query, and ShadCN UI**.  
+Includes **JWT authentication, protected routes, profile management, and API handling**.
 
-Currently, two official plugins are available:
+🚀 **Features:**
+- ✅ **Sign Up & Login** with JWT authentication
+- ✅ **Token storage & validation** (localStorage)
+- ✅ **Protected Routes** for authenticated users
+- ✅ **API integration** with Axios & React Query
+- ✅ **UI components from ShadCN UI + TailwindCSS**
+- ✅ **Deployed on Vercel**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## ⚡ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend**: React + TypeScript + Vite
+- **State Management**: React Context
+- **API Handling**: Axios + React Query
+- **Form Validation**: React Hook Form + Zod
+- **UI Components**: ShadCN UI + TailwindCSS
+- **Routing**: React Router
+- **Deployment**: Vercel
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## **📝 Explanation of Key Folders**
+| 📂 **Folder** | 📌 **Description** |
+|--------------|------------------|
+| **`src/assets`** | Static assets (images, fonts, etc.) |
+| **`src/components/auth`** | Authentication components (Sign Up, Login, etc.) |
+| **`src/components/ui`** | UI components (buttons, inputs, forms) |
+| **`src/context`** | Global context providers (profile, theme) |
+| **`src/hooks`** | Custom hooks for authentication, API requests, etc. |
+| **`src/layouts`** | Page layout components |
+| **`src/routes`** | Application routes (protected & authorized routes) |
+| **`src/utils`** | Utility functions (token handling, theme settings) |
+| **`src/api.ts`** | API request handling with Axios |
+| **`config/queryClient.ts`** | React Query client setup |
+| **`vite.config.ts`** | Vite configuration file |
+
+---
+
+## **🚀 Getting Started**
+
+## 🚀 Installation & Setup
+
+### **1️⃣ Clone the Repository**
+First, clone the project from GitHub:
+```sh
+git clone https://github.com/i-vanb/react-auth.git
+cd react-auth
+
+npm install
+or
+yarn install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### **2️⃣ Set Up Environment Variables**
+Create a `.env` file in the root directory and add the following environment variables:
+```sh
+VITE_API_BASE_URL=YOUR_BACKEND_API_BASE_URL
 ```
+
+### **3️⃣ Start the Development Server**
+
+
+## 🚀 Improvements
+- [ ] **Replace Local Storage with Cookies**: Use HTTP-only cookies for storing JWT tokens.
